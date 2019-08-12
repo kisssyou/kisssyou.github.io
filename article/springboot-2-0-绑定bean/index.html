@@ -71,7 +71,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('/img/article_header/article_header.png')
+            background-image: url('/img/article_header/article-header-city.jpg')
             /*post*/
         
     }
@@ -88,7 +88,7 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#Hexo" title="Hexo">Hexo</a>
+                              <a class="tag" href="/tags/#springboot" title="springboot">springboot</a>
                             
                         </div>
                         <h1>springboot 2.0 绑定bean</h1>
@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -212,7 +212,9 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h1 id="springboot-20-通过-binder-绑定bean">springboot 2.0 通过 Binder 绑定bean</h1>
+                <blockquote>
+<p>springboot 2.0 通过 Binder 绑定bean</p>
+</blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">HashMap&lt;String, String&gt; map = new HashMap(8);</span><br><span class="line">map.put(&quot;name&quot;, &quot;Abc&quot;);</span><br><span class="line">map.put(&quot;age&quot;, &quot;25&quot;);</span><br><span class="line">map.put(&quot;address&quot;, &quot;chongqing&quot;);</span><br><span class="line">map.put(&quot;dd&quot;, &quot;dd&quot;);</span><br><span class="line"></span><br><span class="line">Class&lt;User&gt; clazz = (Class&lt;User&gt;) ClassUtils.resolveClassName(&quot;com.ai.ecs.test.User&quot;, null);</span><br><span class="line"></span><br><span class="line">ConfigurationPropertySource propertySource = new MapConfigurationPropertySource(map);</span><br><span class="line">Binder binder = new Binder(propertySource);</span><br><span class="line"></span><br><span class="line">BindResult&lt;User&gt; bindResult = binder.bind(ConfigurationPropertyName.EMPTY, Bindable.of(clazz));</span><br><span class="line"></span><br><span class="line">if (bindResult.isBound())&#123;</span><br><span class="line">    User user = bindResult.get();</span><br><span class="line">    System.out.println(JSONObject.toJSONString(user));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
                 
 
@@ -268,7 +270,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#springboot-20-通过-binder-绑定bean"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">springboot 2.0 &#x901A;&#x8FC7; Binder &#x7ED1;&#x5B9A;bean</span></a></li></ol>
+          <ol class="nav">none</ol>
         
         </div>
       </aside>
@@ -288,7 +290,7 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#Hexo" title="Hexo">Hexo</a>
+                          <a class="tag" href="/tags/#springboot" title="springboot">springboot</a>
                         
                     </div>
                 </section>
